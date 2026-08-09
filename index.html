@@ -314,21 +314,29 @@
   object-fit: cover;
 }
 
-  .code-body-photo {
+ .code-body-photo {
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 0;
-    height: 500px
+  width: 100%;
+  aspect-ratio: 4 / 5;   /* scales proportionally with card width */
 }
 
 .profile-img {
   width: 100%;
   height: 100%;
-  max-width: none;         /* remove the width cap */
-  object-fit: cover;       /* fills frame without stretching/distorting */
-  border-radius: 0;        /* optional: remove if you want sharp corners matching the window */
+  max-width: none;
+  object-fit: cover;
+  border-radius: 0;
   box-shadow: none;
+  display: block;
+}
+
+@media (max-width: 640px) {
+  .code-body-photo {
+    aspect-ratio: 3 / 4;  /* slightly shorter crop on small phones */
+  }
 }
 :root{
   --bg:#060810;
@@ -585,7 +593,7 @@ section{padding:90px 0;position:relative;}
 .exp-dot{width:14px;height:14px;border-radius:50%;background:var(--grad);margin-top:6px;box-shadow:0 0 0 4px rgba(139,92,246,0.15);flex-shrink:0;}
 .exp-bar{width:2px;flex:1;background:linear-gradient(var(--violet),transparent);margin-top:4px;}
 .exp-item:last-child .exp-bar{display:none;}
-.exp-content{padding:0 0 46px 22px;}
+
 .exp-head{display:flex;align-items:center;gap:12px;}
 .exp-logo{
   width:42px;height:42px;border-radius:50%;overflow:hidden;flex-shrink:0;
@@ -938,7 +946,7 @@ footer span{color:var(--violet);}
         </div>
         EXPERIENCE
       </div>
-      <h2>Where I've Worked</h2>
+      <h2>EXPERIENCE</h2>
       <p>Hands-on experience building real-world applications and sharpening my full-stack skills.</p>
     </div>
 
@@ -1078,7 +1086,7 @@ footer span{color:var(--violet);}
       <div class="tool-card"><img class="tool-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="VS Code"><span>VS Code</span></div>
 <div class="tool-card"><img class="tool-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL Workbench"><span>MySQL Workbench</span></div>
 <div class="tool-card"><img class="tool-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/eclipse/eclipse-original.svg" alt="Eclipse"><span>Eclipse</span></div>
-<div class="tool-card on"><img class="tool-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/intellij/intellij-original.svg" alt="IntelliJ IDEA"><span>IntelliJ IDEA</span></div>
+<div class="tool-card "><img class="tool-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/intellij/intellij-original.svg" alt="IntelliJ IDEA"><span>IntelliJ IDEA</span></div>
 <div class="tool-card"><img class="tool-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git"><span>Git</span></div>
 <div class="tool-card"><img class="tool-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" style="filter:invert(1)"><span>GitHub</span></div>
 <div class="tool-card"><img class="tool-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postman/postman-original.svg" alt="Postman"><span>Postman</span><small>REST API Testing</small></div>
@@ -1092,7 +1100,7 @@ footer span{color:var(--violet);}
   <div class="wrap">
     <div class="sec-head reveal">
       <div class="eyebrow"><div class="icon-box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg></div>PROJECTS</div>
-      <h2>Things I've Built</h2>
+      <h2>Featured Projects</h2>
       <p>A look at the products and platforms I've designed and shipped end-to-end.</p>
     </div>
 
